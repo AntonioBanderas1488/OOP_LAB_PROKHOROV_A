@@ -1,7 +1,9 @@
 // ООП Лабораторна робота №4
 
 public class Lab4{
-    public static void lab4(){
+    public static void lab4() {
+        System.out.println("\n Лабораторна №4:\n");
+
         // Завдання №1
         task1();
 
@@ -97,7 +99,7 @@ public class Lab4{
         System.out.println("Результат виконання програми до завдання №3: "); // виводимо текст на консоль
 
         System.out.print("Введіть кількість елементів у масиві: ");
-        int n = Main.sc.nextInt(); // Зчитування кількості елементів у масиві
+        int n = Main.scanInt(); // Зчитування кількості елементів у масиві
 
         double[] arr = new double[n]; // Ініціалізація масиву з заданою кількістю елементів
 
@@ -105,7 +107,7 @@ public class Lab4{
         System.out.println("Введіть елементи масиву:");
         for (int i = 0; i < n; i++) {
             System.out.print("Елемент " + (i + 1) + ": ");
-            arr[i] = Main.sc.nextDouble(); // Зчитування елементів масиву з клавіатури
+            arr[i] = Main.scanDouble(); // Зчитування елементів масиву з клавіатури
         }
 
         double sum = 0.0; // Змінна для збереження суми елементів масиву

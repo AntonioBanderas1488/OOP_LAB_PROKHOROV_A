@@ -1,7 +1,8 @@
 // ООП Лабораторна робота №3
-
 public class Lab3{
     public static void lab3(){
+        System.out.println("\n Лабораторна №3:\n");
+
         // Завдання №1
         task1();
 
@@ -81,15 +82,15 @@ public class Lab3{
 
         // Запит на введення початкової точки інтервалу
         System.out.print("Введіть початкову точку інтервалу: ");
-        double start = Main.sc.nextDouble();
+        double start = Main.scanDouble();
 
         // Запит на введення кінцевої точки інтервалу
         System.out.print("Введіть кінцеву точку інтервалу: ");
-        double end = Main.sc.nextDouble();
+        double end = Main.scanDouble();
 
         // Запит на введення кроку
         System.out.print("Введіть крок: ");
-        double step = Main.sc.nextDouble();
+        double step = Main.scanDouble();
 
         // Ініціалізація лічильника кількості значень функції у вказаному діапазоні
         int count = 0;

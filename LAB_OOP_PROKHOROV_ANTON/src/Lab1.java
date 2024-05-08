@@ -1,7 +1,9 @@
 // ООП Лабораторна робота №1
 
 public class Lab1{
-    public static void lab1(){
+    public static void lab1() {
+        System.out.println("\n Лабораторна №1:\n");
+
         // Викликаємо функції завдань 1-4
         System.out.println("\nРезультат виконання завдання №1: ");
         task1();
@@ -26,7 +28,7 @@ public class Lab1{
 
         // зчитуємо числа з клавіатури і заповнюємо масив
         for (int i = 0; i < 10; i++) {
-            arr[i] = Main.sc.nextInt();
+            arr[i] = Main.scanInt();
         }
 
         System.out.println("Числа: "); // виводимо текст на консоль
@@ -137,7 +139,7 @@ public class Lab1{
     // Завдання №5
     public static void task5() {
         System.out.println("Введіть число для реверсування: ");
-        int inputNumber = Main.sc.nextInt();
+        int inputNumber = Main.scanInt();
 
         NumberReverser reverser = new NumberReverser(inputNumber);
         int reversed = reverser.reverseNumber();
@@ -155,10 +157,10 @@ class User {
     // Конструктор для ініціалізації об'єкта користувача
     public User() {
         System.out.println("\n Введіть Id: ");
-        this.id = Main.sc.nextInt(); // Зчитуємо id користувача з консолі
+        this.id = Main.scanInt(); // Зчитуємо id користувача з консолі
 
         System.out.println("\n Введіть Age: ");
-        this.age = Main.sc.nextInt(); // Зчитуємо вік користувача з консолі
+        this.age = Main.scanInt(); // Зчитуємо вік користувача з консолі
 
         System.out.println("\n Введіть Name: ");
         this.name = Main.sc.next(); // Зчитуємо ім'я користувача з консолі
@@ -167,10 +169,10 @@ class User {
         this.surname = Main.sc.next(); // Зчитуємо прізвище користувача з консолі
 
         System.out.println("\n Введіть Weight: ");
-        this.weight = Main.sc.nextDouble(); // Зчитуємо вагу користувача з консолі
+        this.weight = Main.scanDouble(); // Зчитуємо вагу користувача з консолі
 
         System.out.println("\n Введіть Height: ");
-        this.height = Main.sc.nextDouble(); // Зчитуємо зріст користувача з консолі
+        this.height = Main.scanDouble(); // Зчитуємо зріст користувача з консолі
     }
 }
 
@@ -183,7 +185,7 @@ class Car {
     // Конструктор для ініціалізації об'єкта користувача
     public Car() {
         System.out.println("\n Введіть Id: ");
-        this.id = Main.sc.nextInt(); // Зчитуємо id автомобіля з консолі
+        this.id = Main.scanInt(); // Зчитуємо id автомобіля з консолі
 
         System.out.println("\n Введіть Mark: ");
         this.mark = Main.sc.next(); // Зчитуємо марку автомобіля з консолі
@@ -192,16 +194,16 @@ class Car {
         this.model = Main.sc.next(); // Зчитуємо модель автомобіля з консолі
 
         System.out.println("\n Введіть Power: ");
-        this.power = Main.sc.nextInt(); // Зчитуємо потужність автомобіля з консолі
+        this.power = Main.scanInt(); // Зчитуємо потужність автомобіля з консолі
 
         System.out.println("\n Введіть Volume: ");
-        this.volume = Main.sc.nextInt(); // Зчитуємо об'єм автомобіля з консолі
+        this.volume = Main.scanInt(); // Зчитуємо об'єм автомобіля з консолі
 
         System.out.println("\n Введіть Weight: ");
-        this.weight = Main.sc.nextDouble(); // Зчитуємо вагу автомобіля з консолі
+        this.weight = Main.scanDouble(); // Зчитуємо вагу автомобіля з консолі
 
         System.out.println("\n Введіть Height: ");
-        this.height = Main.sc.nextDouble(); // Зчитуємо висоту автомобіля з консолі
+        this.height = Main.scanDouble(); // Зчитуємо висоту автомобіля з консолі
     }
 }
 

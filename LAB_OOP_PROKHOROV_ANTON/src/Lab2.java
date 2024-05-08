@@ -1,9 +1,10 @@
 // ООП Лабораторна робота №2
-
 public class Lab2 {
-    public static void lab2(){
+    public static void lab2() {
+        System.out.println("\n Лабораторна №2:\n");
+
         System.out.println("Виберіть завдання (1, 2, 3, 4 або 5): ");
-        int taskNumber = Main.sc.nextInt();
+        int taskNumber = Main.scanInt();
 
         switch (taskNumber) {
             case 1:
@@ -31,11 +32,11 @@ public class Lab2 {
         System.out.println("Введіть коефіцієнти квадратного рівняння: ");
         double a, b, c;
         System.out.print("a=");
-        a = Main.sc.nextInt();
+        a = Main.scanInt();
         System.out.print("b=");
-        b = Main.sc.nextInt();
+        b = Main.scanInt();
         System.out.print("c=");
-        c = Main.sc.nextInt();
+        c = Main.scanInt();
 
         if (a == 0) {
             double x = -c / b;
@@ -63,9 +64,9 @@ public class Lab2 {
     // Метод для розв'язання другого завдання: визначення квадранта за координатами точки
     public static void solveTask2() {
         System.out.print("x=");
-        double x = Main.sc.nextInt();
+        double x = Main.scanInt();
         System.out.print("y=");
-        double y = Main.sc.nextInt();
+        double y = Main.scanInt();
 
         if (x > 0 && y > 0) {
             System.out.println("Точка знаходиться в першому квадранті.");
@@ -91,7 +92,7 @@ public class Lab2 {
     // Метод для розв'язання третього завдання: перевірка, чи число є двозначним та парним
     public static void solveTask3() {
         System.out.println("Введіть число:");
-        int number = Main.sc.nextInt();
+        int number = Main.scanInt();
 
         if (number >= 10 && number <= 99) {
             if (number % 2 == 0) {
@@ -107,7 +108,7 @@ public class Lab2 {
     // Метод для розв'язання четвертого завдання: обчислення значення функції
     public static void solveTask4() {
         System.out.println("Введіть число:");
-        double x = Main.sc.nextInt();
+        double x = Main.scanInt();
 
         double f;
 
@@ -134,7 +135,7 @@ public class Lab2 {
         System.out.println("7. Виконати арифметичні операції");
 
         System.out.println("Виберіть опцію (введіть число від 1 до 7):");
-        int choice = Main.sc.nextInt();
+        int choice = Main.scanInt();
 
         switch (choice) {
             case 1:
@@ -166,7 +167,7 @@ public class Lab2 {
     // Метод для перевірки, чи це робочий день
     public static void checkWorkingDay() {
         System.out.println("Введіть номер дня тижня (від 1 до 7):");
-        int dayNumber = Main.sc.nextInt();
+        int dayNumber = Main.scanInt();
         if (dayNumber >= 1 && dayNumber <= 7) {
             if (dayNumber >= 1 && dayNumber <= 5) {
                 System.out.println("Це робочий день.");
@@ -181,7 +182,7 @@ public class Lab2 {
     // Метод для визначення пори року за номером місяця
     public static void checkSeason() {
         System.out.println("Введіть номер місяця (від 1 до 12):");
-        int monthNumber = Main.sc.nextInt();
+        int monthNumber = Main.scanInt();
         if (monthNumber >= 1 && monthNumber <= 12) {
             String season;
             if (monthNumber >= 3 && monthNumber <= 5) {
@@ -202,7 +203,7 @@ public class Lab2 {
     // Метод для виведення кількості днів у місяці
     public static void checkDaysInMonth() {
         System.out.println("Введіть номер місяця (від 1 до 12):");
-        int monthNumber = Main.sc.nextInt();
+        int monthNumber = Main.scanInt();
         if (monthNumber >= 1 && monthNumber <= 12) {
             int daysInMonth;
             if (monthNumber == 2) {
@@ -224,7 +225,7 @@ public class Lab2 {
         System.out.println("2. Запрошення до роботи на комп’ютері");
         System.out.println("3. Пропозиція завершити роботу");
         System.out.println("Виберіть опцію (введіть число від 1 до 3):");
-        int option = Main.sc.nextInt();
+        int option = Main.scanInt();
         switch (option) {
             case 1:
                 System.out.println("Привіт!");
@@ -243,7 +244,7 @@ public class Lab2 {
     // Метод для виведення назви предмету за номером пари
     public static void displaySubject() {
         System.out.println("Введіть номер пари (від 1 до 4):");
-        int pairNumber = Main.sc.nextInt();
+        int pairNumber = Main.scanInt();
         String subject;
         switch (pairNumber) {
             case 1:
@@ -267,7 +268,7 @@ public class Lab2 {
     // Метод для визначення, в яку чверть години потрапляє число хвилин
     public static void determineQuarter() {
         System.out.println("Введіть число від 0 до 59:");
-        int minutes = Main.sc.nextInt();
+        int minutes = Main.scanInt();
         if (minutes >= 0 && minutes <= 59) {
             int quarter = minutes / 15 + 1;
             System.out.println("Це число потрапляє в " + quarter + " чверть години.");
@@ -279,14 +280,14 @@ public class Lab2 {
     // Метод для виконання арифметичних операцій
     public static void performArithmeticOperations() {
         System.out.println("Введіть перше число:");
-        double num1 = Main.sc.nextInt();
+        double num1 = Main.scanInt();
         System.out.println("Введіть друге число:");
-        double num2 = Main.sc.nextInt();
+        double num2 = Main.scanInt();
         System.out.println("Виберіть операцію:");
         System.out.println("1. Добуток");
         System.out.println("2. Сума");
         System.out.println("3. Різниця");
-        int operation = Main.sc.nextInt();
+        int operation = Main.scanInt();
         double result;
         switch (operation) {
             case 1:

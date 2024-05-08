@@ -1,7 +1,9 @@
 // ООП Лабораторна робота №5
 
-public class Lab5{
-    public static void lab5(){
+public class Lab5 {
+    public static void lab5() {
+        System.out.println("\n Лабораторна №5:\n");
+
         while (true) {
             // Виводимо меню
             System.out.println("Оберіть опцію:");
@@ -12,7 +14,7 @@ public class Lab5{
             System.out.println("5. Вихід");
 
             System.out.print("Ваш вибір: ");
-            int choice = Main.sc.nextInt();
+            int choice = Main.scanInt();
 
             switch (choice) {
                 case 1:
@@ -49,50 +51,50 @@ public class Lab5{
         System.out.println("7. Площа кола");
 
         System.out.print("Ваш вибір: ");
-        int choice = Main.sc.nextInt();
+        int choice = Main.scanInt();
 
         double result = 0.0;
 
         switch (choice) {
             case 1:
                 System.out.print("Введіть довжину сторони квадрата: ");
-                double side = Main.sc.nextDouble();
+                double side = Main.scanDouble();
                 result = squareArea(side); // Викликаємо метод для обчислення площі квадрата
                 break;
             case 2:
                 System.out.print("Введіть довжину та ширину прямокутника: ");
-                double length = Main.sc.nextDouble();
-                double width = Main.sc.nextDouble();
+                double length = Main.scanDouble();
+                double width = Main.scanDouble();
                 result = rectangleArea(length, width); // Викликаємо метод для обчислення площі прямокутника
                 break;
             case 3:
                 System.out.print("Введіть довжину основи та висоту паралелограма: ");
-                double baseParallelogram = Main.sc.nextDouble();
-                double heightParallelogram = Main.sc.nextDouble();
+                double baseParallelogram = Main.scanDouble();
+                double heightParallelogram = Main.scanDouble();
                 result = parallelogramArea(baseParallelogram, heightParallelogram); // Викликаємо метод для обчислення площі паралелограма
                 break;
             case 4:
                 System.out.print("Введіть довжину однієї сторони та висоту ромба: ");
-                double sideRhombus = Main.sc.nextDouble();
-                double heightRhombus = Main.sc.nextDouble();
+                double sideRhombus = Main.scanDouble();
+                double heightRhombus = Main.scanDouble();
                 result = rhombusArea(sideRhombus, heightRhombus); // Викликаємо метод для обчислення площі ромба
                 break;
             case 5:
                 System.out.print("Введіть довжину катетів прямокутного трикутника: ");
-                double leg1 = Main.sc.nextDouble();
-                double leg2 = Main.sc.nextDouble();
+                double leg1 = Main.scanDouble();
+                double leg2 = Main.scanDouble();
                 result = triangleArea(leg1, leg2); // Викликаємо метод для обчислення площі прямокутного трикутника
                 break;
             case 6:
                 System.out.print("Введіть довжини основ та висоту трапеції: ");
-                double base1 = Main.sc.nextDouble();
-                double base2 = Main.sc.nextDouble();
-                double heightTrapezoid = Main.sc.nextDouble();
+                double base1 = Main.scanDouble();
+                double base2 = Main.scanDouble();
+                double heightTrapezoid = Main.scanDouble();
                 result = trapezoidArea(base1, base2, heightTrapezoid); // Викликаємо метод для обчислення площі трапеції
                 break;
             case 7:
                 System.out.print("Введіть радіус кола: ");
-                double radius = Main.sc.nextDouble();
+                double radius = Main.scanDouble();
                 result = circleArea(radius); // Викликаємо метод для обчислення площі кола
                 break;
             default:
@@ -142,9 +144,9 @@ public class Lab5{
     // Метод для знаходження найменшого числа
     public static void findMinimum() {
         System.out.print("Введіть три числа через пробіл: ");
-        double num1 = Main.sc.nextDouble();
-        double num2 = Main.sc.nextDouble();
-        double num3 = Main.sc.nextDouble();
+        double num1 = Main.scanDouble();
+        double num2 = Main.scanDouble();
+        double num3 = Main.scanDouble();
 
         double min = num1;
         if (num2 < min) {
